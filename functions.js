@@ -13,25 +13,51 @@
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-
+//init search
+function search (anml, nm) {
+    //loop thru animal array
+    for (let i = 0; i < anml.length; i++) {
+        //if name = input, return that animal's obj, else return null
+        if (anml[i]['name'].toLowerCase() === nm.toLowerCase()) {
+            return anml[i];
+        }
+    }
+return null;
+}
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Replace //////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-
+//init replace
+function replace (animals, name, replacement) {
+    //if animal name exist in array, replace it with replacement
+    for (let i = 0; i < animals.length; i++) {
+        if (name === animals[i].name) {
+            animals.splice(i, 1, replacement);
+        }
+    }
+}
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Remove ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-
+function remove (animals, name) {
+    for (let i = 0; i < animals.length; i++) {
+        if (name === animals[i].name) {
+            animals.splice(i, 1);
+        }
+    }
+}
 
 //////////////////////////////////////////////////////////////////////
 // Step 4 - Add ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-
+function add (animals, animal) {
+    if (animal.name.length > 0 && animal.species.length > 0)
+}
 
 /**
  * You did it! You're all done with Matchy!

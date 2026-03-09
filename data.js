@@ -14,7 +14,7 @@
 
 animal = {};
 animal.species = 'lion';
-animal.name = 'leo';
+animal.name = 'Leo';
 animal.noises = [];
 console.log(animal);
 
