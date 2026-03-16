@@ -56,7 +56,16 @@ function remove (animals, name) {
 //////////////////////////////////////////////////////////////////////
 
 function add (animals, animal) {
-    if (animal.name.length > 0 && animal.species.length > 0)
+    
+    if (animal.name.length > 0 && animal.species.length > 0) {
+        for (let i = 0; i < animals.length; i++) {
+            if (animal.name === animals[i].name) {
+                return;
+            } 
+        }
+            animals.push(animal);
+    }
+    
 }
 
 /**
